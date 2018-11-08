@@ -1,0 +1,4 @@
+1) -DBUF_SIZE=nbytes makes it takes shorter to execute the file. However, the size of buffer does not affect more than execution time.
+2) With O_SYNC coping becomes more slower because we have to wait I/O request for a long time.
+In this case, it is better to apply asynchronous mode.
+3) Making buffer size less will extremely increase the time of copying that confirms the need to use asynchronous mode.
